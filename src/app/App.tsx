@@ -241,14 +241,14 @@ function Hero({ setActive }: { setActive: (s: string) => void }) {
             className="font-extrabold leading-tight mb-5"
             style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(2.2rem,5vw,3.6rem)", color: COLORS.navy }}
             initial={{ opacity: 0, y: 36 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, delay: 0.1 }}>
-            Your Complete<br />
-            <span style={{ color: COLORS.blue }}>Facility</span> &amp;{" "}
-            <span style={{ color: COLORS.teal }}>IT</span> Partner
+            Your Trusted<br />
+            <span style={{ color: COLORS.blue }}>Housekeeping</span> &amp;{" "}
+            <span style={{ color: COLORS.teal }}>Facility</span> Partner
           </motion.h1>
 
           <motion.p className="text-gray-500 text-base leading-relaxed mb-8 max-w-md"
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-            M S Enterprises delivers housekeeping, computer AMC, man power services, pest control, horticulture, and office supplies — all under one trusted roof in Greater Noida.
+            M S Enterprises delivers professional housekeeping, trained manpower, computer AMC & repair, pest control, garden maintenance, office supplies, and electrical services — providing reliable, end-to-end facility solutions to businesses and organizations across Greater Noida.
           </motion.p>
 
           <motion.div className="flex flex-wrap gap-3 mb-8"
@@ -787,7 +787,7 @@ function Footer() {
             );
           })}
         </div>
-        <p className="text-xs text-gray-300">© {new Date().getFullYear()} M S Enterprises. All rights reserved.</p>
+        <p className="text-xs text-gray-300">© {new Date().getFullYear()} M S Enterprise. All rights reserved.</p>
       </div>
     </footer>
   );
