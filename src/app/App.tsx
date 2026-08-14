@@ -76,17 +76,15 @@ const GALLERY = [
 
 const CLIENTS = [
   { name: "Income Tax Department", location: "Gurugram", icon: "🏛️", featured: true },
-  { name: "GST Department", location: "State Tax", icon: "📋", featured: false },
-  { name: "Labour Court", location: "Gautam Buddh Nagar", icon: "⚖️", featured: false },
-  { name: "Commercial Court", location: "District Court", icon: "📜", featured: false },
-  { name: "Archaeological Survey of India", location: "Gurugram", icon: "🏺", featured: false },
-  { name: "Mining Department", location: "State Government", icon: "⛏️", featured: false },
-  { name: "Disaster Management Department", location: "Government", icon: "🚨", featured: false },
-  { name: "ADM - Gautam Buddh Nagar", location: "Administration", icon: "🏢", featured: false },
-  { name: "Motor Accidents Claims Tribunal (MACT)", location: "Gurugram", icon: "🚗", featured: false },
-  { name: "Dental Council of India", location: "Gurugram", icon: "🦷", featured: false },
-  { name: "Diploma Engineering", location: "Gurugram", icon: "🔧", featured: false },
-  { name: "Land Acquisition, Rehabilitation, and Resettlement Authority (LARRA)", location: "Gurugram", icon: "🏗️", featured: true },
+  { name: "GST Department (State Tax)", location: "Gautam Buddh Nagar", icon: "📋", featured: false },
+  { name: "Commercial Court ( District Court )", location: "Gautam Buddh Nagar", icon: "📜", featured: false },
+  { name: "Archaeological Survey of India", location: "Gautam Buddh Nagar", icon: "🏺", featured: false },
+  { name: "Mining Department", location: "Gautam Buddh Nagar", icon: "⛏️", featured: false },
+  { name: "Disaster Management Department", location: "Gautam Buddh Nagar", icon: "🚨", featured: false },
+  { name: "ADM - Administration", location: "Gautam Buddh Nagar", icon: "🏢", featured: false },
+  { name: "Motor Accidents Claims Tribunal (MACT)", location: "Gautam Buddh Nagar", icon: "🚗", featured: false },
+  { name: "D.B.P. ENGINEERING WORKS PVT. LTD.", location: "Gautam Buddh Nagar", icon: "🔧", featured: false },
+  { name: "Land Acquisition, Rehabilitation, and Resettlement Authority (LARRA)", location: "Gautam Buddh Nagar", icon: "🏗️", featured: true },
 ];
 
 const REVIEWS = [
