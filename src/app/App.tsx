@@ -787,7 +787,7 @@ function Footer() {
             );
           })}
         </div>
-        <p className="text-xs text-gray-300">© {new Date().getFullYear()} M S Enterprise. All rights reserved.</p>
+        <p className="text-xs text-gray-300">© {new Date().getFullYear()} M S Enterprises. All rights reserved.</p>
       </div>
     </footer>
   );
