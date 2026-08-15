@@ -30,12 +30,13 @@ const SERVICE_COLORS = [
 ];
 
 /* ─── Data ──────────────────────────────────────────────────────────────────── */
-const NAV_LINKS = ["Home", "Services", "Products", "Clients", "Contact"];
+const NAV_LINKS = ["Home", "Services", "Products", "Clients", "Careers", "Contact"];
 const SECTION_IDS: Record<string, string> = {
   Home: "home",
   Services: "services",
   Products: "gallery",
   Clients: "clients",
+  Careers: "careers",
   Contact: "contact",
 };
 
@@ -175,18 +176,29 @@ function NavBar({ active, setActive }: { active: string; setActive: (s: string) 
         </button>
 
         <nav className="hidden md:flex items-center gap-7">
-          {NAV_LINKS.map((link) => (
-            <motion.button key={link} type="button" onClick={() => scrollTo(link)}
-              className="text-sm font-semibold pb-0.5 relative"
-              style={{ color: active === link ? COLORS.blue : "#6b7280" }}
-              whileHover={{ y: -1 }}>
-              {link}
-              {active === link && (
-                <motion.div className="absolute -bottom-0.5 left-0 right-0 h-0.5 rounded-full"
-                  style={{ background: COLORS.blue }} layoutId="ul" />
-              )}
-            </motion.button>
-          ))}
+          {NAV_LINKS.map((link) => {
+            if (link === "Careers") {
+              return (
+                <a key={link} href="/careers.html"
+                  className="text-sm font-semibold pb-0.5 relative"
+                  style={{ color: "#6b7280" }}>
+                  {link}
+                </a>
+              );
+            }
+            return (
+              <motion.button key={link} type="button" onClick={() => scrollTo(link)}
+                className="text-sm font-semibold pb-0.5 relative"
+                style={{ color: active === link ? COLORS.blue : "#6b7280" }}
+                whileHover={{ y: -1 }}>
+                {link}
+                {active === link && (
+                  <motion.div className="absolute -bottom-0.5 left-0 right-0 h-0.5 rounded-full"
+                    style={{ background: COLORS.blue }} layoutId="ul" />
+                )}
+              </motion.button>
+            );
+          })}
         </nav>
 
         <motion.button type="button" onClick={() => scrollTo("Contact")}
@@ -204,11 +216,20 @@ function NavBar({ active, setActive }: { active: string; setActive: (s: string) 
       {open && (
         <motion.div className="md:hidden bg-white border-t border-gray-100 px-6 pb-5 pt-3 flex flex-col gap-3"
           initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }}>
-          {NAV_LINKS.map((link) => (
-            <button key={link} type="button" onClick={() => { scrollTo(link); setOpen(false); }}
-              className="text-sm font-semibold text-left py-1"
-              style={{ color: active === link ? COLORS.blue : "#6b7280" }}>{link}</button>
-          ))}
+          {NAV_LINKS.map((link) => {
+            if (link === "Careers") {
+              return (
+                <a key={link} href="/careers.html"
+                  className="text-sm font-semibold text-left py-1"
+                  style={{ color: "#6b7280" }}>{link}</a>
+              );
+            }
+            return (
+              <button key={link} type="button" onClick={() => { scrollTo(link); setOpen(false); }}
+                className="text-sm font-semibold text-left py-1"
+                style={{ color: active === link ? COLORS.blue : "#6b7280" }}>{link}</button>
+            );
+          })}
           <button type="button" onClick={() => { scrollTo("Contact"); setOpen(false); }}
             className="text-sm font-semibold px-5 py-2.5 rounded-xl text-white text-center mt-1"
             style={{ background: `linear-gradient(135deg, ${COLORS.blue} 0%, ${COLORS.navy} 100%)` }}>
