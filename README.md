@@ -99,6 +99,3 @@ Key learning areas included:
 
 
 
-```text
-screenshots/
-└── homepage.png
